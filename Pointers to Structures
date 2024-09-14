@@ -1,0 +1,21 @@
+/* Pointers to Structures-
+struct student s1;
+struct student *ptr;
+ptr =&s1;
+*/
+
+#include<stdio.h>
+#include<string.h>
+struct student{
+    int roll;
+    float cgpa;
+    char name[100];
+};
+int main(){
+    struct student s1={1664,3.4,"Rohit"};
+    printf("%s\n%d\n%.2f\n\n",s1.name,s1.roll,s1.cgpa);
+    struct student *ptr=&s1;
+    printf("Roll = %d\n",(*ptr).roll);
+    return 0;
+
+}
