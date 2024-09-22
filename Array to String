@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<string.h>
+struct student{
+    int roll;
+    float cgpa;
+    char name[100];
+};
+int main(){
+    struct student cse[100];
+    cse[0].roll=18;
+    cse[0].cgpa=3.5;
+    strcpy(cse[0].name,"Rohit");
+    printf("Roll = %d\nCGPA = %f\nName = %s \n\n",cse[0].roll,cse[0].cgpa,cse[0].name);
+    cse[1].roll=19;
+    cse[1].cgpa=3.5;
+    strcpy(cse[1].name,"Radit");
+     printf("Roll = %d\nCGPA = %f\nName = %s",cse[1].roll,cse[1].cgpa,cse[1].name);
+    return 0;
+}
