@@ -13,10 +13,13 @@ struct student{
 void printInfo(struct student s1){
     printf("Roll = %d\n",s1.roll);
     printf("Name = %s\n",s1.name);
-    printf("Cgpa = %f\n",s1.cgpa);
+    printf("Cgpa = %f\n\n",s1.cgpa);
 }
 int main(){
-    struct student s1={1664 , 3.4, "Rohit" };
+    struct student s1={1664 ,3.4,"Rohit"};
     printInfo(s1);
+    //call by refercene
+    s1.roll=1600;
+    printf("Roll= %d\n ",s1.roll);
     return 0;
 }
