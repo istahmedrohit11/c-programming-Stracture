@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<string.h>
+typedef struct CSEstudent{
+    int roll;
+    float cgpa;
+    char name[100];
+}cse;
+int main(){
+    cse s1;
+    s1.roll=1188;
+    strcpy(s1.name,"rohit");
+    printf("Roll= %d\n",s1.roll);
+    printf("Name= %s\n",s1.name);
+    return 0;
+}
