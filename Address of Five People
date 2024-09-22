@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+struct address {
+    int houseNo;
+    int block;
+    char city[100];
+    char state[100];
+};
+void printAdd(struct address add) {
+    printf("Address is: House=%d, Block=%d, City=%s, State=%s\n",
+    add.houseNo, add.block, add.city, add.state);
+}
+
+int main(){
+    struct address adds[5];
+    for(int i = 0; i < 5; i++) {
+        printf("Enter info for person %d:\n", i + 1);
+
+        printf("House Number: ");
+        scanf("%d", &adds[i].houseNo);
+        printf("Block: ");
+        scanf("%d", &adds[i].block);
+        printf("City: ");
+        scanf("%99s", adds[i].city); // Limit input to prevent buffer overflo
+        printf("State: ");
+        scanf("%99s", adds[i].state); // Limit input to prevent buffer overflow
+    }
+    for(int i = 0; i < 5; i++) {
+        printAdd(adds[i]); // Print address for each person
+    }
+    return 0;
+}
